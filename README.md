@@ -1,6 +1,6 @@
-Diabetes prediction using Random Forest and Decision Tree
+Diabetes prediction using Random Forest, Decision Tree And XGBosst Classifier.
 
-The following project is machine learning project to forecast if a person is diabetic or non-diabetic with 2 classification model -Random Forest and Decision Tree. The dataset being used is the Pima Indians Diabetes Dataset, which is commonly used to predict medical outcomes.
+The following project is machine learning project to forecast if a person is diabetic or non-diabetic with 3 classification model -Random Forest, Decision Tree and XGB Classifier. The dataset being used is the Pima Indians Diabetes Dataset, which is commonly used to predict medical outcomes.
 
 🔍 Project Overview
 
@@ -10,11 +10,11 @@ Reads diabetes.data and processes it. csv`.
 
 Does feature scaling via StandardScaler.
 
-Trains two models: Random Forest and Tree.
+Trains three models: Random Forest, Decision Tree and XGBoost Classifier.
 
 -Compares both models with 5-fold cross-validation and test accuracy.
 
-Offers ability for users to submit their own data and get predictions from both models.
+Offers ability for users to submit their own data and get predictions from the models.
 
 📁 Dataset
 
@@ -65,6 +65,20 @@ max_depth=10
 min_samples_split=5
 
 min_samples_leaf=4
+XGBClassifier:
+    n_estimators=100,
+    
+    max_depth=10,
+    
+    learning_rate=0.1,
+    
+    subsample=0.8,
+    
+    colsample_bytree=0.8,
+    
+    use_label_encoder=False,
+    
+    eval_metric='logloss'
 
 📈 Evaluation
 
